@@ -1,4 +1,4 @@
-package sample;
+package sample.main;
 
 import sample.dao.AnswerDao;
 import sample.dao.QuestionDao;

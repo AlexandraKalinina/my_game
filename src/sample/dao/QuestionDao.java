@@ -3,10 +3,8 @@ package sample.dao;
 import sample.helpers.DbConnection;
 import sample.model.Question;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class QuestionDao implements DAO {
     private Connection conn;
@@ -51,5 +49,16 @@ public class QuestionDao implements DAO {
             e.printStackTrace();
         }
         return null;
+    }
+    public ArrayList<Question> getListQuestion() throws SQLException {
+        ArrayList<Question> questions = new ArrayList<>();
+        String sql = "select * from question;";
+        Statement statement = conn.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            Question question = new Question(rs.getInt("id"), rs.getString("text"));
+            questions.add(question);
+        }
+        return questions;
     }
 }
