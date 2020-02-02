@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Victorina</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Victorina@localhost [2]" uuid="1b6db404-fea8-49bb-87a0-b5ea971d13dd">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Victorina</jdbc-url>
+    </data-source>
   </component>
 </project>

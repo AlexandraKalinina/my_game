@@ -14,12 +14,12 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
     @FXML
-    public Button ButtonStart;
+    public Button buttonStart;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ButtonStart.setOnAction(event -> {
-            ButtonStart.getScene().getWindow().hide();
+        buttonStart.setOnAction(event -> {
+            buttonStart.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/fxml/sample.fxml"));
             try {
