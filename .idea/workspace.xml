@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="second">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d303b57-3f20-43aa-bc62-78c18f8ead25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d303b57-3f20-43aa-bc62-78c18f8ead25/storage_v2/_src_/database/Victorina.FV-lqw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d303b57-3f20-43aa-bc62-78c18f8ead25/storage_v2/_src_/database/Victorina.FV-lqw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d303b57-3f20-43aa-bc62-78c18f8ead25/storage_v2/_src_/database/Victorina.FV-lqw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d303b57-3f20-43aa-bc62-78c18f8ead25/storage_v2/_src_/database/Victorina.FV-lqw/schema/public.abK9xQ.meta" beforeDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="third">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/controler/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/controler/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/controler/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/dao/QuestionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/dao/QuestionDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/fxml/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/fxml/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/fxml/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controler/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controler/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controler/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/dao/AnswerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/dao/AnswerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/fxml/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxml/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxml/sample.fxml" afterDir="false" />
     </list>
@@ -331,7 +319,7 @@
       <workItem from="1577006253179" duration="11499000" />
       <workItem from="1577360043491" duration="597000" />
       <workItem from="1580330088621" duration="223000" />
-      <workItem from="1580392936120" duration="9035000" />
+      <workItem from="1580392936120" duration="25228000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1577094989176</created>
@@ -354,7 +342,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577095605209</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="second">
+      <created>1580647303149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580647303149</updated>
+    </task>
+    <task id="LOCAL-00005" summary="third">
+      <created>1580647372212</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580647372212</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +379,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="second" />
-    <option name="LAST_COMMIT_MESSAGE" value="second" />
+    <MESSAGE value="third" />
+    <option name="LAST_COMMIT_MESSAGE" value="third" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -389,16 +392,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="16" />
+          <line>109</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
-          <line>55</line>
-          <properties class="sample.controler.Controller" method="answer">
+          <line>105</line>
+          <properties class="sample.controler.Controller" method="doTime">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
