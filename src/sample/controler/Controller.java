@@ -40,7 +40,6 @@ public class Controller implements Initializable {
     ArrayList<Question> questions = new ArrayList<>();
     ArrayList<Answer> answers = new ArrayList<>();
     int index = 0;
-    boolean flag1, flag2, flag3, flag4;
     private int startTime = 11;
     private int startTimeSeconds = startTime;
 
@@ -55,53 +54,45 @@ public class Controller implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        inputLabel.setText(questions.get(index).getText());
-        labelTime.setTextFill(Color.BLACK);
-        labelTime.setFont(Font.font(20));
-        doTime(11);
-        for (int i=0; i < answers.size(); i=i+4) {
-            if (answers.get(i).getId_question()==questions.get(index).getId()) {
-                button1.setText(answers.get(i).getText());
-                button2.setText(answers.get(i+1).getText());
-                button3.setText(answers.get(i+2).getText());
-                button4.setText(answers.get(i+3).getText());
-            }
-        }
-        index++;
+        nextQuestion();
+        //labelTime.setTextFill(Color.BLACK);
+        //labelTime.setFont(Font.font(20));
     }
-
-    public void answer() {
-        doTime(11);
-        inputLabel.setText(questions.get(index).getText());
-        for (int i=0; i < answers.size(); i=i+4) {
-            if (answers.get(i).getId_question()==questions.get(index).getId()) {
-                button1.setText(answers.get(i).getText());
-                button2.setText(answers.get(i+1).getText());
-                button3.setText(answers.get(i+2).getText());
-                button4.setText(answers.get(i+3).getText());
-                flag1 = answers.get(i).isFlag();
-                flag2 = answers.get(i+1).isFlag();
-                flag3 = answers.get(i+2).isFlag();
-                flag4 = answers.get(i+3).isFlag();
-            }
-            color(button1, flag1);
-            color(button2, flag2);
-            color(button3, flag3);
-            color(button4, flag4);
-
-        }
-        index++;
+    private Button yourButton;
+    private String yourAnswer = "";
+    private boolean flag = false;
+    public void answer(ActionEvent actionEvent) {
+        yourButton = (Button) actionEvent.getSource();
+        yourAnswer = yourButton.getText();
+        Answer answer = getAnswerByButton(yourButton);
+        flag = answer.isFlag();
+        color(yourButton, flag);
     }
     public void color(Button btn, Boolean flag) {
         btn.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if (flag) {
-                    btn.setStyle("-fx-background-color: green");
+                    btn.getStyleClass().add("addColorGreen");
+                    //btn.setStyle("-fx-background-color: green");
                 }
-                else btn.setStyle("-fx-background-color: red");
+                else btn.getStyleClass().add("addColorRed");
+                    //btn.setStyle("-fx-background-color: red");
             }
         });
+    }
+    public void nextQuestion() {
+        inputLabel.setText(questions.get(index).getText());
+        for (int i=0; i < answers.size(); i=i+4) {
+            if (answers.get(i).getId_question()==questions.get(index).getId()) {
+                button1.setText(answers.get(i).getText());
+                button2.setText(answers.get(i+1).getText());
+                button3.setText(answers.get(i+2).getText());
+                button4.setText(answers.get(i+3).getText());
+            }
+        }
+        doTime(11);
+        index++;
     }
     private void doTime(int time) {
         startTimeSeconds = time;
@@ -117,11 +108,34 @@ public class Controller implements Initializable {
                 labelTime.setText("У вас осталось: "+ startTimeSeconds + " секунд");
                 if (startTimeSeconds<=0) {
                     timeline.stop();
-                    answer();
+                    if (yourAnswer.equals("")) {
+                        empty();
+                    }
+                    else {
+                        if (flag) {
+                            yourButton.getStyleClass().remove("addColorGreen");
+                        }
+                        else yourButton.getStyleClass().remove("addColorRed");
+                        sendToServer();
+                    }
+                    yourAnswer = "";
                 }
             }
         });
         timeline.getKeyFrames().add(frame);
         timeline.playFromStart();
+        nextQuestion();
+    }
+    public void sendToServer() {
+
+    }
+    public void empty() {
+
+    }
+    public Answer getAnswerByButton(Button btn) {
+        String text = btn.getText();
+        AnswerDao ad = new AnswerDao();
+        Answer answer = ad.getAnswerByText(text);
+        return answer;
     }
 }
