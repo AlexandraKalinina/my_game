@@ -11,10 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.dao.AnswerDao;
@@ -42,19 +38,18 @@ public class Controller implements Initializable {
     @FXML
     public Label labelTime;
     @FXML
-    public EndController endController;
-    @FXML
-    public Controller thisController;
+    public Button endButton;
 
     ArrayList<Question> questions = new ArrayList<>();
     ArrayList<Answer> answers = new ArrayList<>();
     int index = 0;
     private int startTime = 11;
     private int startTimeSeconds = startTime;
-    private int count;
+    public int count;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         QuestionDao qd = new QuestionDao();
         AnswerDao ad = new AnswerDao();
         count = 0;
@@ -65,10 +60,7 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         nextQuestion();
-        doTime(11);
-        //labelTime.setTextFill(Color.BLACK);
-        //labelTime.setFont(Font.font(20));
-    }
+        doTime(11);    }
     private Button yourButton;
     private String yourAnswer = "";
     private boolean flag = false;
@@ -79,6 +71,7 @@ public class Controller implements Initializable {
         flag = answer.isFlag();
         if (flag) {
             yourButton.getStyleClass().add("addColorGreen");
+            count++;
         }
         else yourButton.getStyleClass().add("addColorRed");
         button1.setDisable(true);
@@ -88,21 +81,10 @@ public class Controller implements Initializable {
     }
       public void nextQuestion() {
         if (index >= questions.size()) {
-            /*FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/fxml/end.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Parent root = loader.getRoot();
-            //EndController controller = loader.getController();
-            endController.addLabel(count, questions.size());
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-             */
-            endController.init(thisController);
+            button1.setDisable(true);
+            button2.setDisable(true);
+            button3.setDisable(true);
+            button4.setDisable(true);
         }
         button1.setDisable(false);
         button2.setDisable(false);
@@ -131,34 +113,30 @@ public class Controller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 startTimeSeconds--;
-                /*System.out.println("====");
-                System.out.println(startTimeSeconds);
-                System.out.println(flag);
-                System.out.println(yourAnswer);
-                System.out.println("====");
-                 */
                 labelTime.setText("У вас осталось: "+ startTimeSeconds + " секунд");
                 if (startTimeSeconds<=0) {
-                    System.out.println("------------------------------------------");
                     timeline.stop();
                     if (yourAnswer.equals("")) {
                         empty();
                     }
                     else {
-                        String s2 = yourButton.getStyleClass().toString();
-                        System.out.println(s2);
                         if (flag) {
                             yourButton.getStyleClass().remove("addColorGreen");
                         }
                         else yourButton.getStyleClass().remove("addColorRed");
                         sendToServer();
-                        String s3 = yourButton.getStyleClass().toString();
-                        System.out.println(s3);
                     }
                     yourAnswer = "";
                     flag = false;
-                    nextQuestion();
-                    doTime(11);
+                    if (index >= questions.size()) {
+                        button1.setDisable(true);
+                        button2.setDisable(true);
+                        button3.setDisable(true);
+                        button4.setDisable(true);
+                    } else {
+                        nextQuestion();
+                        doTime(11);
+                    }
                 }
             }
         });
@@ -177,6 +155,25 @@ public class Controller implements Initializable {
         AnswerDao ad = new AnswerDao();
         Answer answer = ad.getAnswerByText(text);
         return answer;
+    }
+
+    public void start(ActionEvent actionEvent) {
+        endButton.setOnAction(event -> {
+            endButton.getScene().getWindow().hide();
+            String text = loadLabel();
+            AgentController.getInstance().setText(text);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/fxml/end.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
     }
 
     public String loadLabel() {

@@ -9,6 +9,11 @@ public class AddDb {
     public static void main(String[] args) {
         QuestionDao qd = new QuestionDao();
         AnswerDao ad = new AnswerDao();
+        qd.createQuestion("Любимое пиво Володи Котлярова?");
+        ad.createAnswer("Белый медведь", "Любимое пиво Володи Котлярова?", false);
+        ad.createAnswer("Балтика 9", "Любимое пиво Володи Котлярова?", false);
+        ad.createAnswer("Охота крепкая", "Любимое пиво Володи Котлярова?", true);
+        ad.createAnswer("Essa", "Любимое пиво Володи Котлярова?", false);
         /*qd.createQuestion("Сколько веганов в группе Порнофильмы?");
        ad.createAnswer("1","Сколько веганов в группе Порнофильмы?",false);
         ad.createAnswer("2","Сколько веганов в группе Порнофильмы?",false);

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fourth">
-      <change afterPath="$PROJECT_DIR$/src/sample/controler/EndController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/fxml/end.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="six">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/controler/AgentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/controler/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/controler/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/controler/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/controler/MenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Victor/sample/main/AddDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Victor/sample/main/AddDb.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controler/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controler/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controler/EndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controler/EndController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controler/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controler/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/fxml/end.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxml/end.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/fxml/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxml/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/main/AddDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/main/AddDb.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -319,7 +326,7 @@
       <workItem from="1577360043491" duration="597000" />
       <workItem from="1580330088621" duration="223000" />
       <workItem from="1580392936120" duration="33168000" />
-      <workItem from="1580926924829" duration="23827000" />
+      <workItem from="1580926924829" duration="47570000" />
     </task>
     <task id="LOCAL-00001" summary="second">
       <created>1577094989176</created>
@@ -370,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580932031660</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="six">
+      <created>1581270855510</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581270855510</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,51 +409,42 @@
     <MESSAGE value="second" />
     <MESSAGE value="third" />
     <MESSAGE value="fourth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fourth" />
+    <MESSAGE value="six" />
+    <option name="LAST_COMMIT_MESSAGE" value="six" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/main/AddDb.java</url>
-          <line>19</line>
+          <line>24</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/controler/EndController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/controler/EndController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="56" />
+          <url>file://$PROJECT_DIR$/src/sample/controler/AgentController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/controler/Controller.java</url>
-          <line>143</line>
-          <option name="timeStamp" value="71" />
+          <line>83</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/sample/controler/EndController.java</url>
-          <line>21</line>
-          <properties class="sample.controler.EndController" method="initialize">
+          <url>file://$PROJECT_DIR$/src/sample/controler/AgentController.java</url>
+          <line>12</line>
+          <properties class="sample.controler.AgentController" method="getInstance">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/sample/controler/EndController.java</url>
-          <line>42</line>
-          <properties class="sample.controler.EndController" method="init">
+          <url>file://$PROJECT_DIR$/src/sample/controler/AgentController.java</url>
+          <line>25</line>
+          <properties class="sample.controler.AgentController" method="setText">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="55" />
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

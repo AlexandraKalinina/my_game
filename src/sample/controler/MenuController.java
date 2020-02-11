@@ -20,6 +20,7 @@ public class MenuController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         buttonStart.setOnAction(event -> {
             buttonStart.getScene().getWindow().hide();
+
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/fxml/sample.fxml"));
             try {
