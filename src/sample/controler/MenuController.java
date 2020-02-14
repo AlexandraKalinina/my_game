@@ -16,8 +16,7 @@ public class MenuController implements Initializable {
     @FXML
     public Button buttonStart;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @Override    public void initialize(URL location, ResourceBundle resources) {
         buttonStart.setOnAction(event -> {
             buttonStart.getScene().getWindow().hide();
 
