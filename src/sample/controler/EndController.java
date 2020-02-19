@@ -16,10 +16,13 @@ import java.util.ResourceBundle;
 public class EndController implements Initializable {
     @FXML
     public Label count;
+    public Label statusLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         String text = AgentController.getInstance().getText();
+        String yourStatus = AgentController.getInstance().getStatus();
         count.setText(text);
+        statusLabel.setText(yourStatus);
     }
 }
